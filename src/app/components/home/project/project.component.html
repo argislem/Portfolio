@@ -11,8 +11,10 @@
                 <owl-carousel-o class='owl-carousel-o' [options]="customOptions" *ngIf="i % 2 == 0">
                     <ng-container *ngFor="let img of project.imgs">
                         <ng-template carouselSlide [id]="project.Title + i">
+                            <!-- Added click handler to open image modal -->
                             <div #imgContainer class='img-container'>
-                                <img class='img-feature-proyect rounded' [src]="img" [alt]="project.Title">
+                                <img class='img-feature-proyect rounded cursor-pointer' [src]="img" [alt]="project.Title"
+                                    (click)="openImageModal(img)">
                             </div>
                         </ng-template>
                     </ng-container>
@@ -21,12 +23,15 @@
                 <div class="img-feature-proyect-container" data-aos="fade-up" data-aos-duration="1000" *ngIf="i % 2 == 0">
                     <div class="img-feature-proyect-box">
                         <div class="img-container" style='width: auto;'>
-                            <img class='img-feature-proyect rounded' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px'>
+                            <!-- Added click handler to open image modal -->
+                            <img class='img-feature-proyect rounded cursor-pointer' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px'
+                                (click)="openImageModal(project.imgs[0])">
                         </div>
                     </div>
                 </div>
 
-                <div [ngClass]="{'proyect-info-right': i % 2 == 0, 'proyect-info-left': i % 2 != 0}" [style.backgroundImage]="'url(' + project.imgs[0] + ')'">
+                <div [ngClass]="{'proyect-info-right': i % 2 == 0, 'proyect-info-left': i % 2 != 0}"
+                    [style.backgroundImage]="'url(' + project.imgs[0] + ')'">
                     <div class="proyect-box">
                         <h5 [ngClass]="{'text-right': i % 2 == 0, 'text-left': i % 2 != 0}" class="proyect-name">{{project.Title}}</h5>
 
@@ -41,8 +46,10 @@
                             </li>
                         </ul>
                         <div [ngClass]="{'text-right': i % 2 == 0, 'text-left': i % 2 != 0}" class="proyect-links">
-                            <a *ngIf="project['ghLink']" class="mx-3" style='color: inherit' [href]="project['ghLink']" target="_blank"><i class="ml-3 fab fa-github"></i></a>
-                            <a *ngIf="project['demoLink']" style='color: inherit' [href]="project['demoLink']" target="_blank"><i class="ml-3 fas fa-external-link-alt"></i></a>
+                            <a *ngIf="project['ghLink']" class="mx-3" style='color: inherit' [href]="project['ghLink']" target="_blank"><i
+                                    class="ml-3 fab fa-github"></i></a>
+                            <a *ngIf="project['demoLink']" style='color: inherit' [href]="project['demoLink']" target="_blank"><i
+                                    class="ml-3 fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -50,8 +57,10 @@
                 <owl-carousel-o class='owl-carousel-o' [options]="customOptions" *ngIf="i % 2 != 0">
                     <ng-container *ngFor="let img of project.imgs">
                         <ng-template carouselSlide [id]="project.Title + i">
+                            <!-- Added click handler to open image modal -->
                             <div class='img-container'>
-                                <img class='img-feature-proyect rounded' [src]="img" [alt]="project.Title">
+                                <img class='img-feature-proyect rounded cursor-pointer' [src]="img" [alt]="project.Title"
+                                    (click)="openImageModal(img)">
                             </div>
                         </ng-template>
                     </ng-container>
@@ -60,7 +69,9 @@
                 <div class="img-feature-proyect-container" data-aos="fade-up" data-aos-duration="1000" *ngIf="i % 2 != 0">
                     <div class="img-feature-proyect-box">
                         <div class="img-container" style='width: auto;'>
-                            <img class='img-feature-proyect rounded' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px'>
+                            <!-- Added click handler to open image modal -->
+                            <img class='img-feature-proyect rounded cursor-pointer' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px'
+                                (click)="openImageModal(project.imgs[0])">
                         </div>
                     </div>
                 </div>
@@ -71,3 +82,15 @@
         </div>
     </div>
 </section>
+
+<!-- Added image modal -->
+<div class="image-modal-backdrop" *ngIf="isModalOpen" (click)="onBackdropClick($event)">
+    <div class="image-modal-container">
+        <button class="image-modal-close" (click)="closeImageModal()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="image-modal-content">
+            <img [src]="selectedImage" [alt]="'Modal Image'" class="image-modal-image">
+        </div>
+    </div>
+</div>
