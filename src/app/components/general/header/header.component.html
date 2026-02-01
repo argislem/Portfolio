@@ -1,9 +1,10 @@
 <nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition>0'>
     <div class="container">
-        <a class="navbar-brand text-light" [routerLink]="'inicio'">
-            <img src='assets/images/me/logo.png' width='90' />
-        </a>
-        <ul ngbNav #nav="ngbNav" class="menu-ul">
+      <a class="navbar-brand text-light" [routerLink]="'inicio'">
+        <img src="assets/images/me/logo.png" class="navbar-logo" />
+      </a>
+
+      <ul ngbNav #nav="ngbNav" class="menu-ul">
             <li ngbNavItem (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")'>
                 <a ngbNavLink (click)='scroll("about")'><span class='nav-number'>01. </span> <span class="underline nav-text">About me</span></a>
                 <ng-template ngbNavContent>First content</ng-template>

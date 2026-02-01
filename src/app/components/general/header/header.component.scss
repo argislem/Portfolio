@@ -20,8 +20,20 @@
         }
 
     }
+  .navbar-brand {
+    display: flex;
+    align-items: center;   // centre verticalement
+    height: 70px;          // même hauteur que la navbar
+  }
 
-    .menu-responsive {
+  .navbar-logo {
+    height: 200px;          // 👈 augmente ici
+    width: auto;           // largeur auto
+    object-fit: contain;
+  }
+
+
+  .menu-responsive {
         position: fixed;
         top: 0px;
         bottom: 0px;
