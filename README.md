@@ -1,2 +1,0 @@
-# Portfolio - Thanh Tuan Le
-
