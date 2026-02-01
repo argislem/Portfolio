@@ -9,46 +9,32 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 export class ExperienceComponent implements OnInit {
   Experiences: any[] = [
     {
-      Tab: 'Work',
-      Items: [
-        {
-          Orgenization: 'Techzen Company Limited',
-          Title: 'Fullstack Developer',
-          Date: 'Mar. 2025 - Present',
-          Description: [
-            'Developed and tested (Unit & Integration) new features using Vue.js and FastAPI.',
-            'Worked with large-scale data: processed 2.5-3M records and optimized queries on 250M+ database rows.',
-            'Improved system performance by optimizing SQL queries, boosting query speed by ~30%.',
-            'Completed the company’s internal DevOps training program.'
-          ]
-        },
-        {
-          Orgenization: 'Techzen Company Limited',
-          Title: 'Fullstack Developer Intern',
-          Date: 'Jan. 2025 - Mar. 2025',
-          Description: [
-            'Contributed to the development of Techeyes, an internal HR management product.',
-            'Participated in new feature development within an Agile/Scrum workflow.',
-            'Worked with a Vue.js frontend and Spring boot backend tech stack.'
-          ]
-        }
-      ]
-    },
-    {
       Tab: 'Education',
       Items: [
         {
-          Orgenization: 'University of Technology and Education',
-          Title: 'Bachelor of Information Technology',
-          Date: '2021 - Present',
+          Orgenization: 'Higher Institute of Applied Sciences and Technology,  Sousse, Tunisia',
+          Title: 'National Engineering Degree in Software Engineering',
+          Date: 'September 2022 - June 2025',
           Description: [
-            'Ranked as the 2021 salutatorian and awarded a merit-based scholarship.',
-            'Actively strengthened software development skills through academic learning and real-world projects.'
+            'Comprehensive training in software development, algorithms, and system architecture.',
+            'Skills gained in programming, databases, and project management methodologies.',
+            'Hands-on projects including web and mobile application development.'
+          ]
+        },
+        {
+          Orgenization: 'Higher Institute of Technological Studies, Zaghouan, Tunisia',
+          Title: 'Bachelor’s Degree in Computer Technology',
+          Date: 'September 2019 – June 2022',
+          Description: [
+            'Solid foundation in computer systems, networking, and software development.',
+            'Practical experience with programming languages and database management.',
+            'Participation in academic projects to develop problem-solving and technical skills.'
           ]
         }
       ]
     }
   ];
+
 
   active = 0
 

@@ -16,10 +16,10 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Thanh Tuan Le | Web Developer");
+    this.titleService.setTitle("Islem ARGOUBI | Full Stack Web Developer");
     this.metaService.addTags([
       { name: 'keywords', content: 'Web, software, developer' },
-      { name: 'description', content: 'As a software engineer with expertise in Frontend, I have a comprehensive understanding of Frontend web development. My strong foundation in JavaScript allows me to effectively work with front-end technologies such as Angular.' },
+      { name: 'description', content: 'Passionate about technology and software development, eager to create impactful digital solutions and continuously learn new skills.' },
     ]);
 
     AOS.init();

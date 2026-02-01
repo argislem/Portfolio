@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   responsiveMenuVisible: Boolean = false;
   pageYPosition!: number;
   languageFormControl: FormControl = new FormControl();
-  cvName: string = "CV_LE_THANH_TUAN.pdf";
+  cvName: string = "CV_ISLEM_ARGOUBI_DEVELOPPEUSE_SPRING-ANGULAR_EN.pdf";
 
   constructor(
     private router: Router,
