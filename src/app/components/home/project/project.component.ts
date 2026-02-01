@@ -42,7 +42,7 @@ export class ProjectComponent implements OnInit {
       Title: "Commune Asset Manager",
       Description: "A Designed and developed a municipal asset management application to improve tracking and administration of communal properties. Implemented REST APIs with Spring Boot and dynamic interfaces with React.js. Managed PostgreSQL database, integrated front-end and back-end, and performed functional testing and performance improvements.",
       Technologies: ["Spring Boot","React" ,"PostgreSQL", "Github"],
-      ghLink: "https://github.com/lethanhtuan939/VegetFood-SpringBoot",
+      ghLink: "",
       demoLink: "",
     },
     {
