@@ -11,18 +11,7 @@
         width: 324px;
         margin: auto;
 
-        &:after {
-            content: '';
-            border: 2px solid $Green;
-            z-index: 0;
-            display: block;
-            position: relative;
-            width: 300px;
-            height: 400px;
-            border-radius: 3px;
-            bottom: 390px;
-            left: 23px;
-        }
+
 
         img {
             z-index: 2;
